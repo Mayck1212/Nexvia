@@ -272,11 +272,12 @@ export default function FloatingPrisms() {
       {/* 
         PRISMA 3 (Médio/Grande, Lateral Inferior Esquerda - Próximo ao Notebook)
         - Cubo de Vidro Isométrico Lapidado
-        - Desktop: ~150-170px | Mobile: ~100px
+        - Oculto no Mobile para não sobrepor o vídeo do notebook
+        - Desktop: ~150-170px
         - Flutuação de 22px em 11s
       */}
       <FloatingPrism
-        className="bottom-[18%] sm:bottom-[20%] left-[2%] sm:left-[4%] lg:left-[6%] w-[100px] h-[115px] sm:w-[130px] sm:h-[145px] lg:w-[165px] lg:h-[185px] opacity-85"
+        className="hidden md:block bottom-[18%] sm:bottom-[20%] left-[2%] sm:left-[4%] lg:left-[6%] w-[100px] h-[115px] sm:w-[130px] sm:h-[145px] lg:w-[165px] lg:h-[185px] opacity-85"
         floatDuration={11}
         floatDelay={0.8}
         yAmplitude={22}
