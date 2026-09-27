@@ -1,0 +1,27 @@
+<!-- Nexvia geometric logo mark — isometric lattice / cube grid in white -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-label="Nexvia">
+  <!-- Outer hexagon frame -->
+  <path d="M24 2 L42 13 L42 35 L24 46 L6 35 L6 13 Z"
+        stroke="white" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+  <!-- Inner diamond -->
+  <path d="M24 10 L36 24 L24 38 L12 24 Z"
+        stroke="white" stroke-width="1" fill="none" stroke-linejoin="round"/>
+  <!-- Vertical axis -->
+  <line x1="24" y1="2"  x2="24" y2="46" stroke="white" stroke-width="0.6" stroke-opacity="0.4"/>
+  <!-- Horizontal axis -->
+  <line x1="6"  y1="24" x2="42" y2="24" stroke="white" stroke-width="0.6" stroke-opacity="0.4"/>
+  <!-- Diagonal left -->
+  <line x1="6"  y1="13" x2="42" y2="35" stroke="white" stroke-width="0.6" stroke-opacity="0.4"/>
+  <!-- Diagonal right -->
+  <line x1="42" y1="13" x2="6"  y2="35" stroke="white" stroke-width="0.6" stroke-opacity="0.4"/>
+  <!-- Center dot -->
+  <circle cx="24" cy="24" r="2" fill="white"/>
+  <!-- Corner accent dots -->
+  <circle cx="24" cy="2"  r="1.2" fill="white" fill-opacity="0.6"/>
+  <circle cx="24" cy="46" r="1.2" fill="white" fill-opacity="0.6"/>
+  <circle cx="42" cy="13" r="1.2" fill="white" fill-opacity="0.6"/>
+  <circle cx="42" cy="35" r="1.2" fill="white" fill-opacity="0.6"/>
+  <circle cx="6"  cy="13" r="1.2" fill="white" fill-opacity="0.6"/>
+  <circle cx="6"  cy="35" r="1.2" fill="white" fill-opacity="0.6"/>
+</svg>
+
