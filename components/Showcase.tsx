@@ -149,31 +149,31 @@ export default function Showcase() {
                     Uma experiência energética criada para apresentar estrutura, modalidades e planos de forma mais envolvente.
                   </p>
 
-                  {/* Microindicadores de Personalidade / Atributos */}
+                  {/* Atributos da Demonstração (Foco na experiência criada, sem métricas fictícias) */}
                   <div className="grid grid-cols-3 gap-3 pt-4 pb-6 border-t border-[rgba(255,255,255,0.06)]">
                     <div>
-                      <div className="text-[18px] sm:text-[20px] font-display font-bold text-white tracking-tight">
-                        24/7
-                      </div>
-                      <div className="text-[11px] font-mono text-[#666] uppercase tracking-wider mt-0.5">
-                        Acesso total
-                      </div>
+                      <span className="text-[11px] font-mono font-semibold text-white/40 block">
+                        01
+                      </span>
+                      <span className="text-[12px] sm:text-[13px] font-display font-medium text-[#d4d4d4] tracking-tight mt-0.5 block leading-snug">
+                        Experiência visual
+                      </span>
                     </div>
                     <div>
-                      <div className="text-[18px] sm:text-[20px] font-display font-bold text-white tracking-tight">
-                        +20
-                      </div>
-                      <div className="text-[11px] font-mono text-[#666] uppercase tracking-wider mt-0.5">
-                        Modalidades
-                      </div>
+                      <span className="text-[11px] font-mono font-semibold text-white/40 block">
+                        02
+                      </span>
+                      <span className="text-[12px] sm:text-[13px] font-display font-medium text-[#d4d4d4] tracking-tight mt-0.5 block leading-snug">
+                        Design personalizado
+                      </span>
                     </div>
                     <div>
-                      <div className="text-[18px] sm:text-[20px] font-display font-bold text-white tracking-tight">
-                        +1.5k
-                      </div>
-                      <div className="text-[11px] font-mono text-[#666] uppercase tracking-wider mt-0.5">
-                        Alunos ativos
-                      </div>
+                      <span className="text-[11px] font-mono font-semibold text-white/40 block">
+                        03
+                      </span>
+                      <span className="text-[12px] sm:text-[13px] font-display font-medium text-[#d4d4d4] tracking-tight mt-0.5 block leading-snug">
+                        Estrutura responsiva
+                      </span>
                     </div>
                   </div>
                 </div>

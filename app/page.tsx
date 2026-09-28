@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import MarqueeSection from "@/components/Marquee";
 import Differentials from "@/components/Differentials";
+import TrustSection from "@/components/TrustSection";
 import Services from "@/components/Services";
 import FAQ from "@/components/FAQ";
 import CTAFinal from "@/components/CTAFinal";
@@ -40,9 +40,8 @@ export default function Home() {
 
       <Header />
       <Hero />
-      <MarqueeSection />
 
-      {/* Hero / Marquee → A Realidade */}
+      {/* Hero → A Realidade */}
       <SectionTransition text="Mas uma boa presença digital começa antes do primeiro contato." />
 
       <PainSection />
@@ -67,7 +66,12 @@ export default function Home() {
 
       <Showcase />
 
-      {/* Veja a Nexvia em ação → Planos */}
+      {/* Demonstrações → Por que confiar */}
+      <SectionTransition text="Entenda por que você pode confiar nesse processo." />
+
+      <TrustSection />
+
+      {/* Por que confiar → Planos */}
       <SectionTransition text="Agora, escolha o nível ideal para o seu projeto." />
 
       <Services />
