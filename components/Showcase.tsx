@@ -149,30 +149,30 @@ export default function Showcase() {
                     Uma experiência energética criada para apresentar estrutura, modalidades e planos de forma mais envolvente.
                   </p>
 
-                  {/* Atributos da Demonstração (Foco na experiência criada, sem métricas fictícias) */}
-                  <div className="grid grid-cols-3 gap-3 pt-4 pb-6 border-t border-[rgba(255,255,255,0.06)]">
+                  {/* Atributos da Demonstração (Sem números ou métricas fictícias) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-4 pb-6 border-t border-[rgba(255,255,255,0.06)]">
                     <div>
-                      <span className="text-[11px] font-mono font-semibold text-white/40 block">
-                        01
+                      <span className="text-[11px] font-mono font-bold text-white/90 uppercase tracking-wider block">
+                        Landing Page
                       </span>
-                      <span className="text-[12px] sm:text-[13px] font-display font-medium text-[#d4d4d4] tracking-tight mt-0.5 block leading-snug">
-                        Experiência visual
+                      <span className="text-[12px] text-[#888] font-light tracking-tight mt-1 block leading-snug">
+                        Experiência criada para apresentar o negócio
                       </span>
                     </div>
                     <div>
-                      <span className="text-[11px] font-mono font-semibold text-white/40 block">
-                        02
+                      <span className="text-[11px] font-mono font-bold text-white/90 uppercase tracking-wider block">
+                        Design Personalizado
                       </span>
-                      <span className="text-[12px] sm:text-[13px] font-display font-medium text-[#d4d4d4] tracking-tight mt-0.5 block leading-snug">
-                        Design personalizado
+                      <span className="text-[12px] text-[#888] font-light tracking-tight mt-1 block leading-snug">
+                        Identidade visual adaptada ao projeto
                       </span>
                     </div>
                     <div>
-                      <span className="text-[11px] font-mono font-semibold text-white/40 block">
-                        03
+                      <span className="text-[11px] font-mono font-bold text-white/90 uppercase tracking-wider block">
+                        Experiência Responsiva
                       </span>
-                      <span className="text-[12px] sm:text-[13px] font-display font-medium text-[#d4d4d4] tracking-tight mt-0.5 block leading-snug">
-                        Estrutura responsiva
+                      <span className="text-[12px] text-[#888] font-light tracking-tight mt-1 block leading-snug">
+                        Estrutura pensada para diferentes telas
                       </span>
                     </div>
                   </div>
