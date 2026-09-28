@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import HowItWorks from "@/components/HowItWorks";
 import PainSection from "@/components/PainSection";
 import SolutionSection from "@/components/SolutionSection";
+import Showcase from "@/components/Showcase";
 import SectionTransition from "@/components/SectionTransition";
 
 export default function Home() {
@@ -61,7 +62,12 @@ export default function Home() {
 
       <Differentials />
 
-      {/* Diferenciais → Planos */}
+      {/* Diferenciais → Veja a Nexvia em ação */}
+      <SectionTransition text="Veja na prática como isso se aplica a cada negócio." />
+
+      <Showcase />
+
+      {/* Veja a Nexvia em ação → Planos */}
       <SectionTransition text="Agora, escolha o nível ideal para o seu projeto." />
 
       <Services />
