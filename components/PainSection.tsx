@@ -65,10 +65,8 @@ export default function PainSection() {
                 src="/ipad.mp4"
                 muted
                 playsInline
-                preload="auto"
-                onEnded={(e) => {
-                  e.currentTarget.pause();
-                }}
+                loop
+                preload="metadata"
                 width={1920}
                 height={1080}
                 className="w-full h-auto object-contain pointer-events-none select-none"

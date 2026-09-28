@@ -171,7 +171,7 @@ export default function Services() {
                 {/* Bottom: CTA */}
                 <div className="pt-2">
                   <a
-                    href="https://wa.me/5538999125035"
+                    href={`https://wa.me/5538999125035?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20${encodeURIComponent(service.name)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
@@ -203,7 +203,9 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="text-center text-[12px] text-[#555] mt-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Os valores são iniciais e podem variar conforme a estrutura, complexidade e necessidades do projeto.
+          Os valores são iniciais e podem variar conforme a estrutura, complexidade e necessidades do projeto.<br className="hidden sm:block" />
+          O valor final depende da quantidade de seções, do nível de animações e de recursos extras.<br className="hidden sm:block" />
+          Domínio e hospedagem: <strong className="text-white/60">[incluídos / cobrados à parte]</strong>.
         </motion.p>
 
         {/* Bloco de Ajuda / Atendimento Customizado */}

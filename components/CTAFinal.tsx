@@ -67,7 +67,7 @@ export default function CTAFinal() {
 
           <div className="flex flex-col items-center gap-6">
             <a
-              href="https://wa.me/5538999125035"
+              href="https://wa.me/5538999125035?text=Olá,%20gostaria%20de%20falar%20sobre%20o%20meu%20projeto%20com%20a%20Nexvia."
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center justify-center gap-3 bg-white text-black font-semibold text-[16px] px-10 py-5 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
@@ -82,8 +82,8 @@ export default function CTAFinal() {
               <div className="absolute inset-0 rounded-full shadow-[0_0_40px_rgba(255,255,255,0.2)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </a>
 
-            <p className="text-[13px] text-[#555] font-medium tracking-wide">
-              Sem complicação. Você explica a ideia e a gente conversa sobre o projeto.
+            <p className="text-[13px] text-[#777] font-medium tracking-wide">
+              Você manda a ideia e nos respondemos em até <strong className="text-white/80">[24h]</strong> com uma proposta. Sem compromisso.
             </p>
           </div>
 

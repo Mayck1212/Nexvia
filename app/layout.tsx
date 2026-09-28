@@ -15,10 +15,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Nexvia",
+  title: "Nexvia | Criação de Landing Pages Personalizadas",
   description:
-    "Transformamos negócios em experiências digitais de alto impacto. Design, performance e conversão em cada pixel.",
-  keywords: ["agência web", "desenvolvimento web", "design UI/UX", "landing page", "e-commerce"],
+    "Landing pages personalizadas, sem template, feitas para apresentar seu negócio e levar o visitante ao contato. Design, performance e conversão.",
+  keywords: ["criação de landing page", "landing page personalizada", "site para negócio", "página de vendas", "design de landing page"],
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -30,9 +30,23 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Nexvia",
-    description: "Design premium. Performance real. Resultados mensuráveis.",
+    title: "Nexvia | Criação de Landing Pages Personalizadas",
+    description: "Landing pages personalizadas, sem template, feitas para apresentar seu negócio e levar o visitante ao contato. Design, performance e conversão.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nexvia | Criação de Landing Pages Personalizadas",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nexvia | Criação de Landing Pages Personalizadas",
+    description: "Landing pages personalizadas, sem template, feitas para apresentar seu negócio e levar o visitante ao contato. Design, performance e conversão.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -49,4 +63,3 @@ export default function RootLayout({
     </html>
   );
 }
-

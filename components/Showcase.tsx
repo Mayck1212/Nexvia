@@ -425,9 +425,13 @@ export default function Showcase() {
               <h3 className="text-[22px] sm:text-[26px] font-display font-bold text-white tracking-tight mb-2.5">
                 Hotel Nexvia
               </h3>
-              <p className="text-[14px] sm:text-[15px] text-[#888888] font-light leading-relaxed mb-6">
+              <p className="text-[14px] sm:text-[15px] text-[#888888] font-light leading-relaxed mb-4">
                 Uma experiência sofisticada criada para transmitir conforto, exclusividade e desejo de reserva.
               </p>
+              <div className="mb-6 space-y-2 text-[14px]">
+                <p><strong className="text-white">O desafio:</strong> Evocar a sensação de hospedagem premium através da tela antes mesmo do check-in.</p>
+                <p><strong className="text-white">A solução:</strong> Espaçamentos amplos, tipografia clássica serifada e transições suaves de página.</p>
+              </div>
 
               {/* Mockup do Hotel */}
               <a

@@ -93,9 +93,9 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center gap-5 relative z-20">
+          <div className="mt-10 flex flex-col items-center gap-4 relative z-20">
             <a
-              href="https://wa.me/5538999125035"
+              href="https://wa.me/5538999125035?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20uma%20landing%20page%20para%20o%20meu%20negócio."
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center justify-center gap-3 bg-white text-black font-semibold text-[15px] px-8 py-4 rounded-full hover:bg-[#e8e8e8] active:scale-[0.98] transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.1)]"
@@ -105,6 +105,9 @@ export default function Hero() {
                 <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
+            <span className="text-[12px] text-[#777] font-medium tracking-wide">
+              Você manda a ideia e nos respondemos em até <strong className="text-white/80">[24h]</strong> com uma proposta. Sem compromisso.
+            </span>
           </div>
         </motion.div>
 
@@ -125,10 +128,8 @@ export default function Hero() {
               autoPlay
               muted
               playsInline
-              preload="auto"
-              onEnded={(e) => {
-                e.currentTarget.pause();
-              }}
+              loop
+              preload="metadata"
               width={1280}
               height={720}
               className="w-full h-auto object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)] mix-blend-lighten pointer-events-none select-none"

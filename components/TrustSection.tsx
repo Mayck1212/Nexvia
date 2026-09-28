@@ -10,6 +10,7 @@ const trustPillars = [
     label: "Personalização Real",
     title: "Pensado para o seu negócio",
     desc: "Não usamos uma solução visual genérica. Cada página é construída considerando o segmento, a identidade, o público e o objetivo exclusivo do seu negócio.",
+    guarantee: "Página feita do zero, sem template",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-white">
         <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -23,6 +24,7 @@ const trustPillars = [
     label: "Acompanhamento Ativo",
     title: "Você acompanha o processo",
     desc: "Você não precisa simplesmente “entregar tudo e esperar”. A comunicação é transparente durante todo o desenvolvimento, permitindo revisar e alinhar o projeto antes da publicação.",
+    guarantee: "Até [5] rodadas de ajustes inclusas",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-white">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -35,6 +37,7 @@ const trustPillars = [
     label: "Estratégia Visual",
     title: "Design que tem propósito",
     desc: "A estética não existe apenas para impressionar. Hierarquia visual, conteúdo, navegação e chamadas para ação são pensados para tornar a experiência clara e intuitiva para quem visita a página.",
+    guarantee: "Você só publica quando aprovar",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-white">
         <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -48,6 +51,7 @@ const trustPillars = [
     label: "Base Sólida",
     title: "Pronto para crescer",
     desc: "Sua landing page é construída com padrões modernos de desenvolvimento, código limpo e arquitetura pensada para evoluir com novas demandas conforme seu negócio escala.",
+    guarantee: "Código limpo e fácil de evoluir",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-white">
         <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -239,13 +243,28 @@ export default function TrustSection() {
                 {/* Linha discreta de acabamento inferior */}
                 <div className="mt-6 pt-4 border-t border-[rgba(255,255,255,0.04)] flex items-center justify-between text-[11px] font-mono text-[#555]">
                   <span>Padrão de Entrega</span>
-                  <span className="group-hover:text-white/70 transition-colors duration-300">✓ Garantido</span>
+                  <span className="group-hover:text-white/70 transition-colors duration-300">{pillar.guarantee}</span>
                 </div>
 
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Linha Destaque Prazo */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-12 text-center"
+        >
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.05)] backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-[#f0f0f0] opacity-80" />
+            <span className="text-[13px] text-[#a3a3a3] tracking-wide">
+              Prazo médio de entrega: <strong className="text-white font-medium">[4] dias úteis</strong> após o briefing.
+            </span>
+          </div>
+        </motion.div>
 
       </div>
     </section>
