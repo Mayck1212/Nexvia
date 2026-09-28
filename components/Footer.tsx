@@ -34,7 +34,7 @@ export default function Footer() {
             {/* Links */}
             <div className="flex flex-wrap justify-center gap-8">
               {[
-                { label: "Início", href: "#" },
+                { label: "Início", href: "#inicio" },
                 { label: "Serviços", href: "#planos" },
                 { label: "Diferenciais", href: "#diferenciais" },
                 { label: "FAQ", href: "#faq" }

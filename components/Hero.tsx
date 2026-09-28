@@ -39,6 +39,7 @@ export default function Hero() {
 
   return (
     <section
+      id="inicio"
       ref={ref}
       className="relative flex flex-col items-center justify-start overflow-hidden pt-32 md:pt-44 pb-16 md:pb-24 px-4 min-h-0"
     >

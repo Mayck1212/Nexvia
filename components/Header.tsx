@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "Início", href: "#" },
+  { label: "Início", href: "#inicio" },
   { label: "Serviços", href: "#planos" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "FAQ", href: "#faq" },
@@ -23,8 +23,20 @@ export default function Header() {
 
   const handleNav = (href: string) => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (!href || href === "#" || href === "#inicio") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    try {
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } catch {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -48,7 +60,11 @@ export default function Header() {
         >
           {/* Logo */}
           <a
-            href="#"
+            href="#inicio"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNav("#inicio");
+            }}
             className="flex items-center shrink-0"
             aria-label="NEXVIA"
           >
