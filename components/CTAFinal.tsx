@@ -58,11 +58,11 @@ export default function CTAFinal() {
           </div>
 
           <h2 className="text-[32px] md:text-[48px] font-display font-extrabold text-white leading-[1.1] tracking-tight mb-6 max-w-2xl mx-auto">
-            Pronto para dar uma nova presença ao seu negócio?
+            Sua próxima presença digital começa aqui.
           </h2>
           
-          <p className="text-[16px] md:text-[18px] text-[#777] leading-relaxed mb-12 max-w-xl mx-auto">
-            Conte para a Nexvia o que você precisa e vamos conversar sobre a landing page ideal para sua empresa.
+          <p className="text-[16px] md:text-[18px] text-[#888] leading-relaxed mb-12 max-w-xl mx-auto font-light">
+            Conte para a Nexvia o que você precisa. A partir da sua ideia, construímos uma landing page alinhada ao seu negócio, sua identidade e seus objetivos.
           </p>
 
           <div className="flex flex-col items-center gap-6">
@@ -83,7 +83,7 @@ export default function CTAFinal() {
             </a>
 
             <p className="text-[13px] text-[#555] font-medium tracking-wide">
-              Sem complicação. Você explica sua ideia e a gente conversa sobre o projeto.
+              Sem complicação. Você explica a ideia e a gente conversa sobre o projeto.
             </p>
           </div>
 

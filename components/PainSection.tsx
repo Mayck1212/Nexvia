@@ -44,8 +44,11 @@ export default function PainSection() {
             </h2>
 
             {/* Texto Descritivo */}
-            <p className="text-[16px] text-[#666] leading-relaxed max-w-[500px]">
-              Uma empresa pode oferecer um ótimo serviço, mas se a presença digital não transmitir profissionalismo, clareza e confiança, parte do seu potencial não está sendo aproveitado.
+            <p className="text-[16px] text-[#888] leading-relaxed max-w-[500px]">
+              Você pode ter um ótimo produto, um serviço excelente e uma empresa que realmente entrega. Mas se sua presença digital não transmite isso nos primeiros segundos, o visitante pode nunca descobrir.
+            </p>
+            <p className="text-[15px] text-[#555] leading-relaxed max-w-[500px] mt-4 font-medium">
+              A presença digital precisa acompanhar a qualidade do negócio.
             </p>
           </motion.div>
 

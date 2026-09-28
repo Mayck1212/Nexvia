@@ -83,12 +83,12 @@ export default function Hero() {
             <span className="absolute -top-6 -right-6 hidden lg:block opacity-70">
               <Sparkle size={32} className="animate-[sparkle_3s_ease-in-out_infinite]" />
             </span>
-            Seu negócio merece uma presença digital à altura.
+            Seu negócio merece mais do que uma página.
           </h1>
 
           {/* Subtitle */}
           <p className="mt-6 text-[16px] md:text-[18px] text-[#888] leading-relaxed max-w-2xl">
-            Criamos landing pages personalizadas para transformar sua presença online em uma experiência profissional, moderna e estratégica.
+            A Nexvia cria landing pages personalizadas para transformar a presença do seu negócio na internet em uma experiência que apresenta, comunica e conduz o cliente ao próximo passo.
           </p>
 
           {/* CTA */}

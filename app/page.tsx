@@ -42,7 +42,7 @@ export default function Home() {
       <Hero />
 
       {/* Hero → A Realidade */}
-      <SectionTransition text="Mas uma boa presença digital começa antes do primeiro contato." />
+      <SectionTransition text="Antes de conquistar um cliente, seu negócio precisa conquistar atenção." />
 
       <PainSection />
 

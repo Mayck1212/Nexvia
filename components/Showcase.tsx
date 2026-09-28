@@ -524,7 +524,7 @@ export default function Showcase() {
 
           {/* Texto Secundário */}
           <p className="text-[15px] sm:text-[17px] text-[#737373] max-w-xl mx-auto leading-relaxed mb-8 font-light">
-            A Nexvia cria experiências digitais pensadas para a identidade e os objetivos de cada negócio.
+            A Nexvia cria páginas que partem da identidade do seu negócio — e não de um modelo pronto.
           </p>
 
           {/* CTA Principal de Conversão */}

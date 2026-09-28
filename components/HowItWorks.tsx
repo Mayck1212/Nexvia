@@ -7,32 +7,32 @@ const steps = [
   {
     num: "01",
     eyebrow: "Briefing",
-    title: "Você explica o que precisa",
-    desc: "Entendemos seu negócio, seu público, seus objetivos e o que você quer transmitir através da sua página.",
+    title: "Você conta. A gente entende.",
+    desc: "Entendemos seu negócio, seu público, sua identidade e o que você precisa que a página comunique.",
   },
   {
     num: "02",
     eyebrow: "Planejamento",
-    title: "Estruturamos a ideia",
-    desc: "Organizamos as informações e definimos a estrutura da landing page para que cada seção tenha uma função clara.",
+    title: "Organizamos antes de criar.",
+    desc: "Definimos a estrutura, hierarquia das informações e caminho que o visitante deve percorrer.",
   },
   {
     num: "03",
     eyebrow: "Design e Desenvolvimento",
-    title: "Transformamos a ideia em página",
-    desc: "Criamos o visual e desenvolvemos uma landing page personalizada de acordo com a identidade e as necessidades do seu negócio.",
+    title: "A ideia ganha forma.",
+    desc: "Transformamos o planejamento em uma landing page com identidade visual, estrutura e interações pensadas para o seu negócio.",
   },
   {
     num: "04",
     eyebrow: "Revisão",
-    title: "Você acompanha e ajusta",
-    desc: "Apresentamos o projeto para que você possa analisar, solicitar ajustes e deixar tudo exatamente como deseja.",
+    title: "Você participa do resultado.",
+    desc: "Apresentamos o projeto, recebemos seus ajustes e refinamos os detalhes antes da publicação.",
   },
   {
     num: "05",
     eyebrow: "Publicação",
-    title: "Seu site vai para o ar",
-    desc: "Depois dos ajustes finais, sua landing page fica pronta para ser publicada e apresentada ao seu público.",
+    title: "Sua página vai para o mundo.",
+    desc: "Depois dos ajustes finais, colocamos sua landing page no ar para que seu negócio tenha uma presença digital pronta para ser apresentada ao público.",
   },
 ];
 

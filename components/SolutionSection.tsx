@@ -7,22 +7,22 @@ const benefits = [
   {
     num: "01",
     title: "Clareza",
-    desc: "Seu negócio apresentado de forma organizada para que o visitante entenda rapidamente o que você oferece.",
+    desc: "Seu visitante entende rapidamente quem você é, o que oferece e por que deveria continuar navegando.",
   },
   {
     num: "02",
     title: "Profissionalismo",
-    desc: "Uma presença digital que transmite mais cuidado e credibilidade para quem conhece sua empresa pela internet.",
+    desc: "Uma presença digital que transmite o mesmo cuidado e profissionalismo que você já coloca no seu negócio.",
   },
   {
     num: "03",
     title: "Conversão",
-    desc: "Uma estrutura pensada para levar o visitante ao próximo passo, seja entrar em contato ou conhecer seus serviços.",
+    desc: "Cada seção tem uma função: informar, gerar interesse e facilitar o próximo passo.",
   },
   {
     num: "04",
     title: "Personalização",
-    desc: "Cada página é construída de acordo com a identidade, objetivo e necessidades do seu negócio.",
+    desc: "Nada de encaixar sua empresa em um modelo pronto. A estrutura nasce a partir do seu negócio, da sua identidade e dos seus objetivos.",
   },
 ];
 
@@ -65,8 +65,8 @@ export default function SolutionSection() {
             <h2 className="section-title font-display font-extrabold text-white mb-6">
               Uma presença digital feita para o seu negócio.
             </h2>
-            <p className="text-[16px] text-[#666] leading-relaxed max-w-[500px]">
-              É aqui que a Nexvia entra. Criamos landing pages pensadas para apresentar sua empresa com clareza, transmitir profissionalismo e conduzir seus visitantes até o próximo passo.
+            <p className="text-[16px] text-[#888] leading-relaxed max-w-[500px]">
+              A Nexvia transforma a identidade e os objetivos do seu negócio em uma landing page criada para apresentar sua empresa com clareza, destacar o que importa e conduzir o visitante até o próximo passo.
             </p>
           </motion.div>
 

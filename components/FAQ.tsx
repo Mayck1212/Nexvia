@@ -6,35 +6,35 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 const faqs = [
   {
     q: "Eu preciso saber exatamente como quero minha landing page?",
-    a: "Não. Você pode explicar sua ideia, seu negócio e o que deseja alcançar. A partir dessas informações, a Nexvia ajuda a estruturar a página e definir o que faz sentido para o projeto.",
+    a: "Não. Você só precisa contar sobre seu negócio, seu público e o que quer alcançar. A Nexvia cuida de organizar as ideias, estruturar as seções e criar o visual ideal para o seu projeto.",
   },
   {
     q: "A landing page funciona no celular?",
-    a: "Sim. A página é desenvolvida pensando em diferentes tamanhos de tela, incluindo celulares, tablets e computadores.",
+    a: "Sim, com total adaptação. Seu site é construído e testado para carregar rápido e funcionar com fluidez em smartphones, tablets e computadores.",
   },
   {
     q: "Posso pedir alterações durante o projeto?",
-    a: "Sim. Durante o processo existe uma etapa de revisão para analisar o projeto e solicitar os ajustes necessários antes da publicação.",
+    a: "Sim. Antes de qualquer publicação, você participa de uma etapa de revisão para ver a página pronta, apontar ajustes e garantir que tudo esteja alinhado ao que você deseja.",
   },
   {
     q: "O valor mostrado nos planos é o preço final?",
-    a: "Não necessariamente. Os valores apresentados são iniciais. O investimento final pode variar de acordo com a complexidade, estrutura e necessidades específicas do projeto.",
+    a: "Os valores apresentados são uma base inicial. Projetos com mais seções, recursos específicos ou animações avançadas podem ter o valor ajustado com total clareza antes do início.",
   },
   {
     q: "Domínio e hospedagem estão incluídos?",
-    a: "Os custos de domínio e hospedagem são separados do desenvolvimento da landing page. Caso necessário, a Nexvia pode orientar você sobre essa etapa.",
+    a: "Não estão incluídos nos planos, pois ficam no seu nome. Mas orientamos você passo a passo na contratação e configuração sem nenhuma complicação técnica.",
   },
   {
     q: "Vocês fazem outros tipos de site?",
-    a: "A Nexvia é focada principalmente na criação de landing pages personalizadas para empresas e negócios. A estrutura do projeto é definida de acordo com o objetivo e a necessidade de cada cliente.",
+    a: "Nosso foco principal são landing pages personalizadas para negócios. Se você tiver um projeto com necessidades específicas, converse com a gente para avaliarmos juntos.",
   },
   {
     q: "Como faço para começar?",
-    a: "É simples. Entre em contato pelo WhatsApp e explique um pouco sobre seu negócio e o que você precisa. A partir daí, conversamos sobre a estrutura ideal para o seu projeto.",
+    a: "Basta clicar no botão de contato e mandar uma mensagem no WhatsApp. Você explica sua ideia de forma simples e alinhamos a estrutura e os prazos ideais.",
   },
   {
     q: "Como entro em contato com a Nexvia?",
-    a: "Você pode falar diretamente com a Nexvia pelo WhatsApp através do botão abaixo.",
+    a: "O atendimento é direto pelo WhatsApp. Você conversa diretamente com quem vai planejar o seu projeto, sem intermediários ou burocracia.",
   },
 ];
 

@@ -9,11 +9,11 @@ const services = [
     name: "LANDING ESSENCIAL",
     pricePrefix: "A partir de",
     price: "R$ 200",
-    desc: "Para negócios que precisam de uma presença digital objetiva, profissional e bem estruturada.",
+    desc: "Para quem precisa colocar o negócio no digital com uma página clara, bonita e objetiva.",
     features: [
       "Estrutura essencial",
       "Design personalizado",
-      "Responsividade",
+      "Responsividade completa",
       "Botões de contato",
       "Organização estratégica do conteúdo",
     ],
@@ -25,12 +25,12 @@ const services = [
     name: "LANDING PROFISSIONAL",
     pricePrefix: "A partir de",
     price: "R$ 400",
-    desc: "Para empresas que querem uma landing page mais completa, estratégica e com maior nível de personalização.",
+    desc: "Para quem quer uma presença mais completa, com maior personalização, estrutura estratégica e mais recursos visuais.",
     features: [
       "Estrutura completa",
       "Design personalizado",
       "Seções estratégicas",
-      "Responsividade",
+      "Responsividade completa",
       "Animações e microinterações",
       "Integração com WhatsApp",
       "Maior nível de personalização",
@@ -43,15 +43,15 @@ const services = [
     name: "LANDING PREMIUM",
     pricePrefix: "A partir de",
     price: "R$ 700",
-    desc: "Para projetos que exigem uma experiência visual mais sofisticada, maior complexidade e atenção especial aos detalhes.",
+    desc: "Para projetos que querem levar a experiência visual mais longe, com maior complexidade, animações e atenção aos detalhes.",
     features: [
       "Estrutura personalizada",
-      "Design premium",
+      "Design premium exclusivo",
       "Maior nível de personalização",
       "Animações avançadas",
-      "Microinterações",
-      "Seções personalizadas",
-      "Experiência visual diferenciada",
+      "Microinterações refinadas",
+      "Seções customizadas",
+      "Experiência visual de alto impacto",
       "Responsividade completa",
     ],
     highlight: false,
@@ -203,7 +203,7 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="text-center text-[12px] text-[#555] mt-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Os valores apresentados são iniciais. O investimento final pode variar de acordo com a complexidade, estrutura e necessidades específicas de cada projeto.
+          Os valores são iniciais e podem variar conforme a estrutura, complexidade e necessidades do projeto.
         </motion.p>
 
         {/* Bloco de Ajuda / Atendimento Customizado */}
@@ -213,19 +213,19 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="mt-16 md:mt-20 flex flex-col items-center text-center bg-gradient-to-b from-[rgba(255,255,255,0.02)] to-transparent border border-[rgba(255,255,255,0.04)] rounded-3xl p-10 md:p-14 max-w-4xl mx-auto backdrop-blur-sm"
         >
-          <h3 className="text-[20px] font-display font-semibold text-white mb-4">
-            Não sabe qual opção escolher?
+          <h3 className="text-[20px] font-display font-semibold text-white mb-3">
+            Não sabe qual faz sentido para você?
           </h3>
           <p className="text-[15px] text-[#777] leading-relaxed mb-8 max-w-[500px]">
-            Converse com a Nexvia e explique o que você precisa. A estrutura do projeto será definida de acordo com as necessidades da sua empresa.
+            Sem problema. Conte o que você precisa e a Nexvia ajuda a definir a estrutura mais adequada para o seu projeto.
           </p>
           <a
             href="https://wa.me/5538999125035"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-[rgba(255,255,255,0.15)] text-white font-medium text-[14px] px-8 py-3.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 active:scale-[0.98]"
+            className="inline-flex items-center gap-2.5 border border-[rgba(255,255,255,0.15)] text-white font-medium text-[14px] px-8 py-3.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 active:scale-[0.98]"
           >
-            Falar com a Nexvia
+            <span>Falar com a Nexvia</span>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

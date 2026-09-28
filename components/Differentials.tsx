@@ -397,42 +397,42 @@ const differentials = [
   {
     num: "01",
     title: "Personalização de verdade",
-    desc: "Feito para o seu negócio.",
+    desc: "Sua página parte do seu negócio — não de um template.",
     svg: <SvgPersonalization />,
     delay: 0,
   },
   {
     num: "02",
     title: "Design com propósito",
-    desc: "Visual que comunica.",
+    desc: "Cada elemento visual tem uma função além de simplesmente parecer bonito.",
     svg: <SvgDesign />,
     delay: 0.06,
   },
   {
     num: "03",
     title: "Foco em conversão",
-    desc: "Cada seção tem uma função.",
+    desc: "A página é estruturada para facilitar o próximo passo do visitante.",
     svg: <SvgConversion />,
     delay: 0.12,
   },
   {
     num: "04",
     title: "Experiência moderna",
-    desc: "Uma experiência que chama atenção.",
+    desc: "Animações, interações e detalhes que tornam a navegação mais envolvente sem atrapalhar a experiência.",
     svg: <SvgExperience />,
     delay: 0.18,
   },
   {
     num: "05",
     title: "Identidade da marca",
-    desc: "Sua empresa, sua identidade.",
+    desc: "Cores, linguagem e estética trabalham juntas para fazer a página parecer realmente sua.",
     svg: <SvgIdentity />,
     delay: 0.24,
   },
   {
     num: "06",
     title: "Atenção aos detalhes",
-    desc: "Detalhes que fazem diferença.",
+    desc: "Do espaçamento à microinteração, cada detalhe recebe atenção antes da publicação.",
     svg: <SvgDetails />,
     delay: 0.3,
   },
@@ -460,10 +460,10 @@ export default function Differentials() {
             <span className="text-[11px] text-[#666] uppercase tracking-[0.15em] font-medium">Os Diferenciais</span>
           </div>
           <h2 className="section-title font-display font-extrabold text-white mb-6">
-            Por que a Nexvia é diferente de tudo que você já viu
+            Por que a Nexvia não trabalha com páginas genéricas.
           </h2>
-          <p className="text-[16px] text-[#666] leading-relaxed">
-            Não criamos apenas uma página bonita. Pensamos em como ela apresenta sua empresa, comunica sua proposta e conduz seu visitante.
+          <p className="text-[16px] text-[#888] leading-relaxed">
+            Cada decisão visual existe para representar melhor o seu negócio e tornar a experiência do visitante mais clara, interessante e objetiva.
           </p>
         </motion.div>
 
