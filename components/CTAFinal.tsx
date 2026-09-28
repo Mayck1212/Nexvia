@@ -83,7 +83,7 @@ export default function CTAFinal() {
             </a>
 
             <p className="text-[13px] text-[#777] font-medium tracking-wide">
-              Você manda a ideia e nos respondemos em até <strong className="text-white/80">[24h]</strong> com uma proposta. Sem compromisso.
+              Você manda a ideia e nós respondemos em até <strong className="text-white/80">24h</strong> com uma proposta. Sem compromisso.
             </p>
           </div>
 

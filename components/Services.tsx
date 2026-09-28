@@ -205,7 +205,7 @@ export default function Services() {
         >
           Os valores são iniciais e podem variar conforme a estrutura, complexidade e necessidades do projeto.<br className="hidden sm:block" />
           O valor final depende da quantidade de seções, do nível de animações e de recursos extras.<br className="hidden sm:block" />
-          Domínio e hospedagem: <strong className="text-white/60">[incluídos / cobrados à parte]</strong>.
+          Domínio e hospedagem: <strong className="text-white/60">cobrados à parte</strong>.
         </motion.p>
 
         {/* Bloco de Ajuda / Atendimento Customizado */}

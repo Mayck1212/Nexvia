@@ -24,7 +24,7 @@ const trustPillars = [
     label: "Acompanhamento Ativo",
     title: "Você acompanha o processo",
     desc: "Você não precisa simplesmente “entregar tudo e esperar”. A comunicação é transparente durante todo o desenvolvimento, permitindo revisar e alinhar o projeto antes da publicação.",
-    guarantee: "Até [5] rodadas de ajustes inclusas",
+    guarantee: "Até 5 rodadas de ajustes inclusas",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-white">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -261,7 +261,7 @@ export default function TrustSection() {
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.05)] backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-[#f0f0f0] opacity-80" />
             <span className="text-[13px] text-[#a3a3a3] tracking-wide">
-              Prazo médio de entrega: <strong className="text-white font-medium">[4] dias úteis</strong> após o briefing.
+              Prazo médio de entrega: <strong className="text-white font-medium">4 dias úteis</strong> após o briefing.
             </span>
           </div>
         </motion.div>
