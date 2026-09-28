@@ -128,8 +128,10 @@ export default function Hero() {
               autoPlay
               muted
               playsInline
-              loop
               preload="metadata"
+              onEnded={(e) => {
+                e.currentTarget.pause();
+              }}
               width={1280}
               height={720}
               className="w-full h-auto object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)] mix-blend-lighten pointer-events-none select-none"

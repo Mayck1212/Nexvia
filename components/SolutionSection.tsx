@@ -86,8 +86,10 @@ export default function SolutionSection() {
                 src="/solucao.mp4"
                 muted
                 playsInline
-                loop
                 preload="metadata"
+                onEnded={(e) => {
+                  e.currentTarget.pause();
+                }}
                 width={1280}
                 height={720}
                 className="w-full h-auto object-contain drop-shadow-[0_30px_70px_rgba(0,0,0,0.8)] mix-blend-lighten relative z-10 pointer-events-none select-none"
