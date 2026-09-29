@@ -2,6 +2,8 @@
 
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
+import { EASE_PREMIUM, DUR_SECTION, DUR_DRAMATIC, Y_REVEAL } from "@/lib/motion";
+
 
 const benefits = [
   {
@@ -49,11 +51,11 @@ export default function SolutionSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
-          {/* 1. Header (Título e Descrição) — Order 1 no mobile */}
+          {/* 1. Header (Título e Descrição) — entra primeiro */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: Y_REVEAL }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: DUR_SECTION, ease: EASE_PREMIUM }}
             className="order-1 lg:order-1 lg:col-span-6 lg:row-start-1"
           >
             {/* Eyebrow */}
@@ -70,11 +72,11 @@ export default function SolutionSection() {
             </p>
           </motion.div>
 
-          {/* 2. Asset Visual — Order 2 no mobile, Coluna Direita no Desktop */}
+          {/* 2. Asset Visual — delay maior para criar sequência texto→visual */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: Y_REVEAL }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: DUR_DRAMATIC, delay: 0.22, ease: EASE_PREMIUM }}
             className="order-2 lg:order-2 lg:col-span-6 lg:col-start-7 lg:row-start-1 lg:row-span-2 relative flex justify-center items-center my-4 lg:my-0 pointer-events-none select-none"
           >
             {/* Iluminação e Glow Ambiental */}
@@ -98,11 +100,11 @@ export default function SolutionSection() {
             </div>
           </motion.div>
 
-          {/* 3. Benefícios e CTA — Order 3 no mobile, Abaixo do Header no Desktop */}
+          {/* 3. Benefícios e CTA — segue o header com delay natural */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: Y_REVEAL }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: DUR_SECTION, delay: 0.28, ease: EASE_PREMIUM }}
             className="order-3 lg:order-3 lg:col-span-6 lg:row-start-2 pt-2 lg:pt-0"
           >
             {/* Grade 2x2 de Benefícios */}
@@ -116,7 +118,7 @@ export default function SolutionSection() {
                     <h4 className="text-[15px] font-semibold text-white mb-1">
                       {benefit.title}
                     </h4>
-                    <p className="text-[13px] text-[#666] leading-relaxed">
+                    <p className="text-[13px] text-[#888] leading-relaxed">
                       {benefit.desc}
                     </p>
                   </div>

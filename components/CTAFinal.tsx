@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { EASE_PREMIUM, DUR_DRAMATIC, DUR_SECTION, Y_REVEAL_LARGE, Y_REVEAL } from "@/lib/motion";
+
 
 export default function CTAFinal() {
   const ref = useRef<HTMLElement>(null);
@@ -28,7 +30,7 @@ export default function CTAFinal() {
         <motion.div 
           initial={{ opacity: 0, scaleX: 0 }}
           animate={inView ? { opacity: 1, scaleX: 1 } : {}}
-          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          transition={{ duration: 1.5, ease: EASE_PREMIUM, delay: 0.2 }}
           className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.15)] to-transparent origin-center -translate-y-[150px]"
         />
 
@@ -36,7 +38,7 @@ export default function CTAFinal() {
         <motion.div 
           initial={{ opacity: 0, scaleY: 0 }}
           animate={inView ? { opacity: 1, scaleY: 1 } : {}}
-          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          transition={{ duration: 1.5, ease: EASE_PREMIUM, delay: 0.2 }}
           className="absolute top-0 bottom-0 left-1/2 w-px bg-gradient-to-b from-transparent via-[rgba(255,255,255,0.1)] to-transparent origin-center"
         />
       </div>
@@ -44,9 +46,9 @@ export default function CTAFinal() {
       {/* Main Content Container */}
       <div className="relative z-10 w-full max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
-          animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-          transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0, y: Y_REVEAL_LARGE }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: DUR_DRAMATIC, ease: EASE_PREMIUM }}
           className="relative bg-gradient-to-b from-[rgba(255,255,255,0.03)] to-transparent border border-[rgba(255,255,255,0.05)] rounded-[40px] p-10 md:p-20 text-center backdrop-blur-xl shadow-[0_30px_80px_rgba(0,0,0,0.8)] overflow-hidden"
         >
           {/* Glass Top Highlight */}

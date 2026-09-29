@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { EASE_PREMIUM, DUR_SECTION, Y_REVEAL, STAGGER_CHILDREN, STAGGER_TEXT } from "@/lib/motion";
+
 
 /* ─── Os 4 Pilares de Segurança e Confiança ─────────────────── */
 const trustPillars = [
@@ -101,9 +103,9 @@ export default function TrustSection() {
         
         {/* ─── 1. Elemento Visual Central Superior: Pipeline do Projeto ─── */}
         <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.98 }}
-          animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0, y: Y_REVEAL }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: DUR_SECTION, ease: EASE_PREMIUM }}
           className="w-full max-w-4xl mb-12 md:mb-16"
         >
           <div className="rounded-2xl md:rounded-3xl bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.07)] backdrop-blur-xl p-5 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.7)] relative overflow-hidden">
@@ -147,14 +149,14 @@ export default function TrustSection() {
           </div>
         </motion.div>
 
-        {/* ─── 2. Cabeçalho da Seção ────────────────────────── */}
+        {/* ─── 2. Cabeçalho da Seção — stagger de 3 linhas de texto ─── */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 flex flex-col items-center">
           
-          {/* Eyebrow */}
+          {/* Eyebrow — Camada 1 */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: Y_REVEAL }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: DUR_SECTION, delay: 0.1, ease: EASE_PREMIUM }}
             className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] mb-6 backdrop-blur-md"
           >
             <span className="text-[11px] text-[#888] uppercase tracking-[0.18em] font-medium">
@@ -162,48 +164,48 @@ export default function TrustSection() {
             </span>
           </motion.div>
 
-          {/* Título Principal */}
+          {/* Título Principal — Camada 2 (sem blur, consistente com o resto) */}
           <motion.h2
-            initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-            animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-            transition={{ duration: 0.85, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: Y_REVEAL }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: DUR_SECTION, delay: 0.1 + STAGGER_TEXT, ease: EASE_PREMIUM }}
             className="section-title font-display font-extrabold text-white text-center leading-[1.08] tracking-tight mb-5"
           >
             Por que confiar na Nexvia?
           </motion.h2>
 
-          {/* Ideia Central */}
+          {/* Ideia Central — Camada 3 */}
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: Y_REVEAL }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: DUR_SECTION, delay: 0.1 + STAGGER_TEXT * 2, ease: EASE_PREMIUM }}
             className="text-[17px] md:text-[20px] font-display font-semibold text-[#f0f0f0] max-w-2xl mx-auto leading-relaxed mb-4 tracking-tight"
           >
             Não entregamos apenas uma página bonita. Criamos uma experiência pensada para o seu negócio.
           </motion.p>
 
-          {/* Texto Complementar */}
+          {/* Texto Complementar — Camada 4 */}
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: Y_REVEAL }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.36, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: DUR_SECTION, delay: 0.1 + STAGGER_TEXT * 3, ease: EASE_PREMIUM }}
             className="text-[15px] md:text-[16px] text-[#737373] max-w-2xl mx-auto leading-relaxed font-light"
           >
             Da primeira ideia à publicação, cada projeto é construído para representar sua marca, facilitar a experiência do visitante e transformar sua presença digital em uma ferramenta estratégica para sua empresa.
           </motion.p>
         </div>
 
-        {/* ─── 3. Grid dos 4 Pilares de Confiança ───────────── */}
+        {/* ─── 3. Grid dos 4 Pilares de Confiança ─── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-5xl">
           {trustPillars.map((pillar, index) => (
             <motion.div
               key={pillar.num}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: Y_REVEAL }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{
-                duration: 0.75,
-                delay: 0.4 + index * 0.08,
-                ease: [0.22, 1, 0.36, 1],
+                duration: DUR_SECTION,
+                delay: 0.28 + index * STAGGER_CHILDREN,
+                ease: EASE_PREMIUM,
               }}
               className="h-full"
             >
@@ -251,11 +253,11 @@ export default function TrustSection() {
           ))}
         </div>
 
-        {/* Linha Destaque Prazo */}
+        {/* Linha Destaque Prazo — após o último pilar */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: Y_REVEAL }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: DUR_SECTION, delay: 0.28 + 4 * STAGGER_CHILDREN, ease: EASE_PREMIUM }}
           className="mt-12 text-center"
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.05)] backdrop-blur-md">

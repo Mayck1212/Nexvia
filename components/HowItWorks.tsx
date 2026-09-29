@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { EASE_PREMIUM, DUR_SECTION, DUR_DRAMATIC, Y_REVEAL, STAGGER_CHILDREN } from "@/lib/motion";
+
 
 const steps = [
   {
@@ -46,9 +48,9 @@ export default function HowItWorks() {
         
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: Y_REVEAL }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: DUR_SECTION, ease: EASE_PREMIUM }}
           className="text-center max-w-2xl mx-auto"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] mb-5">
@@ -57,7 +59,7 @@ export default function HowItWorks() {
           <h2 className="section-title font-display font-extrabold text-white">
             Como funciona?
           </h2>
-          <p className="mt-4 text-[16px] text-[#555] leading-relaxed">
+          <p className="mt-4 text-[16px] text-[#888] leading-relaxed">
             Do primeiro contato à sua landing page no ar, tudo acontece de forma simples e organizada.
           </p>
         </motion.div>
@@ -71,9 +73,9 @@ export default function HowItWorks() {
             {steps.map((step, i) => (
               <motion.div
                 key={step.num}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: Y_REVEAL }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: DUR_SECTION, delay: 0.12 + i * STAGGER_CHILDREN, ease: EASE_PREMIUM }}
                 className="relative flex flex-col items-center text-center group"
               >
                 {/* Number Circle with Glow */}
@@ -92,10 +94,11 @@ export default function HowItWorks() {
                     {step.title}
                   </h3>
                   <div className="w-8 h-px bg-[rgba(255,255,255,0.1)] mx-auto mb-4" />
-                  <p className="text-[13px] text-[#555] leading-relaxed">
+                  <p className="text-[13px] text-[#888] leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
+
               </motion.div>
             ))}
           </div>
@@ -103,9 +106,9 @@ export default function HowItWorks() {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: Y_REVEAL }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: DUR_SECTION, delay: 0.12 + 5 * STAGGER_CHILDREN, ease: EASE_PREMIUM }}
           className="mt-16 md:mt-20 flex flex-col items-center"
         >
           <p className="text-[17px] font-display font-medium text-white mb-6">

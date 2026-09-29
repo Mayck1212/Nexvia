@@ -16,17 +16,48 @@ import Showcase from "@/components/Showcase";
 import SectionTransition from "@/components/SectionTransition";
 
 export default function Home() {
-  /* ── Cursor glow that follows the mouse ─────────────────── */
+  /* ── Cursor glow that follows the mouse (GSAP) ─────────────────── */
   const cursorRef = useRef<HTMLDivElement>(null);
 
+  // GSAP will gracefully skip if @gsap/react is not loaded correctly,
+  // but we assume it's installed as requested.
+  // We use standard React useEffect for event listeners because this is a top level Next.js file,
+  // and we want to avoid extra dependencies if possible, but the GSAP logic is straightforward.
+  
   useEffect(() => {
-    const move = (e: MouseEvent) => {
-      if (!cursorRef.current) return;
-      cursorRef.current.style.left = `${e.clientX}px`;
-      cursorRef.current.style.top = `${e.clientY}px`;
+    // Import dynamically so it doesn't break SSR or server components
+    let ctx: any;
+    
+    import("gsap").then((gsapModule) => {
+      const gsap = gsapModule.default;
+      
+      // Use gsap.context to ensure cleanup
+      ctx = gsap.context(() => {
+        // Inicializa o elemento no topo esquerdo com ajuste de 50% via GSAP (muito mais seguro)
+        gsap.set(cursorRef.current, { top: 0, left: 0, xPercent: -50, yPercent: -50 });
+
+        // Create highly optimized setters for x and y transforms (GPU accelerated)
+        const xTo = gsap.quickTo(cursorRef.current, "x", { duration: 0.15, ease: "power3.out" });
+        const yTo = gsap.quickTo(cursorRef.current, "y", { duration: 0.15, ease: "power3.out" });
+
+        const move = (e: MouseEvent) => {
+          // Disable on touch devices (where pointer is coarse)
+          if (window.matchMedia("(pointer: coarse)").matches) return;
+          
+          xTo(e.clientX);
+          yTo(e.clientY);
+        };
+
+        window.addEventListener("mousemove", move, { passive: true });
+        
+        // Add a specific cleanup for the event listener inside the context
+        return () => window.removeEventListener("mousemove", move);
+      }, cursorRef);
+    });
+
+    return () => {
+      if (ctx) ctx.revert();
     };
-    window.addEventListener("mousemove", move, { passive: true });
-    return () => window.removeEventListener("mousemove", move);
   }, []);
 
   return (

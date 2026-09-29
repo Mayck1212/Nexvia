@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { EASE_PREMIUM, DUR_SECTION, Y_REVEAL, STAGGER_CHILDREN } from "@/lib/motion";
+
 
 /* ─── SVG 01: Personalização de verdade (Escultura orgânica e camadas translúcidas adaptáveis) ─── */
 function SvgPersonalization() {
@@ -399,42 +401,36 @@ const differentials = [
     title: "Personalização de verdade",
     desc: "Sua página parte do seu negócio — não de um template.",
     svg: <SvgPersonalization />,
-    delay: 0,
   },
   {
     num: "02",
     title: "Design com propósito",
     desc: "Cada elemento visual tem uma função além de simplesmente parecer bonito.",
     svg: <SvgDesign />,
-    delay: 0.06,
   },
   {
     num: "03",
     title: "Foco em conversão",
     desc: "A página é estruturada para facilitar o próximo passo do visitante.",
     svg: <SvgConversion />,
-    delay: 0.12,
   },
   {
     num: "04",
     title: "Experiência moderna",
     desc: "Animações, interações e detalhes que tornam a navegação mais envolvente sem atrapalhar a experiência.",
     svg: <SvgExperience />,
-    delay: 0.18,
   },
   {
     num: "05",
     title: "Identidade da marca",
     desc: "Cores, linguagem e estética trabalham juntas para fazer a página parecer realmente sua.",
     svg: <SvgIdentity />,
-    delay: 0.24,
   },
   {
     num: "06",
     title: "Atenção aos detalhes",
     desc: "Do espaçamento à microinteração, cada detalhe recebe atenção antes da publicação.",
     svg: <SvgDetails />,
-    delay: 0.3,
   },
 ];
 
@@ -451,9 +447,9 @@ export default function Differentials() {
         
         {/* Header Area */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: Y_REVEAL }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: DUR_SECTION, ease: EASE_PREMIUM }}
           className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] mb-6">
@@ -469,15 +465,15 @@ export default function Differentials() {
 
         {/* 6 Cards Grid (3x2 Desktop, 2x3 Tablet, 1x6 Mobile) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {differentials.map((card) => (
+          {differentials.map((card, i) => (
             <motion.div
               key={card.num}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: Y_REVEAL }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{
-                duration: 0.7,
-                delay: card.delay,
-                ease: [0.22, 1, 0.36, 1],
+                duration: DUR_SECTION,
+                delay: 0.15 + i * STAGGER_CHILDREN,
+                ease: EASE_PREMIUM,
               }}
               className="h-full"
             >

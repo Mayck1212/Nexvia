@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { EASE_PREMIUM, DUR_SECTION, Y_REVEAL, STAGGER_CHILDREN } from "@/lib/motion";
+
 
 const services = [
   {
@@ -89,9 +91,9 @@ export default function Services() {
         
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: Y_REVEAL }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: DUR_SECTION, ease: EASE_PREMIUM }}
           className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] mb-6">
@@ -100,7 +102,7 @@ export default function Services() {
           <h2 className="section-title font-display font-extrabold text-white mb-6">
             Escolha o nível ideal para o seu projeto
           </h2>
-          <p className="text-[16px] text-[#666] leading-relaxed">
+          <p className="text-[16px] text-[#888] leading-relaxed">
             Cada negócio possui uma necessidade diferente. Por isso, criamos opções que podem se adaptar ao nível de complexidade da sua landing page.
           </p>
         </motion.div>
@@ -110,9 +112,9 @@ export default function Services() {
           {services.map((service, i) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: Y_REVEAL }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: DUR_SECTION, delay: 0.12 + i * STAGGER_CHILDREN, ease: EASE_PREMIUM }}
               className={`h-full flex flex-col ${service.highlight ? "md:col-span-2 lg:col-span-1" : ""}`}
             >
               <div
@@ -198,10 +200,10 @@ export default function Services() {
 
         {/* Observação / Disclaimer */}
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center text-[12px] text-[#555] mt-10 max-w-2xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: Y_REVEAL }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: DUR_SECTION, delay: 0.12 + 3 * STAGGER_CHILDREN, ease: EASE_PREMIUM }}
+          className="text-center text-[12px] text-[#888] mt-10 max-w-2xl mx-auto leading-relaxed"
         >
           Os valores são iniciais e podem variar conforme a estrutura, complexidade e necessidades do projeto.<br className="hidden sm:block" />
           O valor final depende da quantidade de seções, do nível de animações e de recursos extras.<br className="hidden sm:block" />
@@ -210,9 +212,9 @@ export default function Services() {
 
         {/* Bloco de Ajuda / Atendimento Customizado */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: Y_REVEAL }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: DUR_SECTION, delay: 0.12 + 4 * STAGGER_CHILDREN, ease: EASE_PREMIUM }}
           className="mt-16 md:mt-20 flex flex-col items-center text-center bg-gradient-to-b from-[rgba(255,255,255,0.02)] to-transparent border border-[rgba(255,255,255,0.04)] rounded-3xl p-10 md:p-14 max-w-4xl mx-auto backdrop-blur-sm"
         >
           <h3 className="text-[20px] font-display font-semibold text-white mb-3">

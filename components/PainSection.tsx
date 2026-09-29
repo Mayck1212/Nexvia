@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
+import { EASE_PREMIUM, DUR_SECTION, DUR_DRAMATIC, Y_REVEAL } from "@/lib/motion";
 
 export default function PainSection() {
   const ref = useRef<HTMLElement>(null);
@@ -26,11 +27,11 @@ export default function PainSection() {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
-          {/* Lado Esquerdo: Textos */}
+          {/* Lado Esquerdo: Textos — entra primeiro, conduz o olhar para o vídeo */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: Y_REVEAL }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: DUR_SECTION, ease: EASE_PREMIUM }}
             className="lg:col-span-5 flex flex-col justify-center"
           >
             {/* Eyebrow */}
@@ -47,16 +48,16 @@ export default function PainSection() {
             <p className="text-[16px] text-[#888] leading-relaxed max-w-[500px]">
               Você pode ter um ótimo produto, um serviço excelente e uma empresa que realmente entrega. Mas se sua presença digital não transmite isso nos primeiros segundos, o visitante pode nunca descobrir.
             </p>
-            <p className="text-[15px] text-[#555] leading-relaxed max-w-[500px] mt-4 font-medium">
+            <p className="text-[15px] text-[#999] leading-relaxed max-w-[500px] mt-4 font-medium">
               A presença digital precisa acompanhar a qualidade do negócio.
             </p>
           </motion.div>
 
-          {/* Lado Direito: Vídeo do Diagnóstico */}
+          {/* Lado Direito: Vídeo — delay maior para criar sequência texto → visual */}
           <motion.div
-            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            initial={{ opacity: 0, y: Y_REVEAL, scale: 0.98 }}
             animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-            transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: DUR_DRAMATIC, delay: 0.22, ease: EASE_PREMIUM }}
             className="lg:col-span-7 relative flex justify-center items-center pointer-events-none select-none"
           >
             <div className="relative w-full flex justify-center">

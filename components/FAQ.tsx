@@ -2,6 +2,8 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import { EASE_PREMIUM, DUR_SECTION, Y_REVEAL, STAGGER_CHILDREN } from "@/lib/motion";
+
 
 const faqs = [
   {
@@ -98,9 +100,9 @@ export default function FAQ() {
         
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: Y_REVEAL }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: DUR_SECTION, ease: EASE_PREMIUM }}
           className="text-center mb-16 md:mb-20"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] mb-6">
@@ -109,19 +111,23 @@ export default function FAQ() {
           <h2 className="section-title font-display font-extrabold text-white mb-5">
             Ainda ficou com alguma dúvida?
           </h2>
-          <p className="text-[16px] text-[#666] leading-relaxed">
+          <p className="text-[16px] text-[#888] leading-relaxed">
             Algumas respostas antes de dar o próximo passo.
           </p>
         </motion.div>
 
-        {/* Accordion */}
+        {/* Accordion — stagger limitado a 4 níveis: items 5-8 entram junto com o item 4 */}
         <div>
           {faqs.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: Y_REVEAL }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: DUR_SECTION,
+                delay: 0.1 + Math.min(i, 3) * STAGGER_CHILDREN,
+                ease: EASE_PREMIUM,
+              }}
             >
               <FaqItem
                 item={item}
